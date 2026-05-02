@@ -24,5 +24,9 @@ for (let select of dropdown) {
 }
 
 function updateFalg(element) {
-    console.log(element);
+    let currencyCode = element.value;
+    let countryCode = countryList[currencyCode];
+    let newImgLink = `https://flagsapi.com/${countryCode}/flat/64.png`;
+    let img = element.parentElement.querySelector("img");
+    img.src = newImgLink;
 }
