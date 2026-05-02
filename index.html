@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter | Atharv Pathak</title>
+    <!-- <link rel="icon" href="assets/favicon.png" type="image/x-icon"> -->
+  </head>
+  <body>
+    <header><div>Currency Converter</div></header>
+
+    <main>
+      <div class="container">
+        <form>
+          <div class="amount">
+            <label for="amount">Enter Amount</label>
+            <input
+              type="text"
+              pattern="^\d+(\.\d+)?$"
+              name=""
+              id="amount"
+              placeholder="100"
+            />
+          </div>
+
+          <div class="dropdown">
+            <div class="from">
+                <label for="from">from</label>
+                <img src="https://flagsapi.com/US/flat/64.png" alt="">
+              <select id="from">
+                <option value="USD" selected>USD</option>
+                <option value="INR">INR</option>
+                <option value="EUR">EUR</option>
+                <option value="AED">AED</option>
+              </select>
+            </div>
+            <div class="to">
+                <label for="to">to</label>
+                <img src="https://flagsapi.com/IN/flat/64.png" alt="">  
+              <select id="to">
+                <option value="USD">USD</option>
+                <option value="INR" selected>INR</option>
+                <option value="EUR">EUR</option>
+                <option value="AED">AED</option>
+              </select>
+            </div>
+          </div>
+          <button>Get Exchange Rate</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
