@@ -18,4 +18,11 @@ for (let select of dropdown) {
       newOption.selected = true;
     }
   }
+  select.addEventListener("change", (event) => {
+    updateFalg(event.target);
+  })
+}
+
+function updateFalg(element) {
+    console.log(element);
 }
