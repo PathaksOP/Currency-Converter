@@ -1,5 +1,5 @@
-const base_url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json`;
-
+const base_url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies`;
+const btn = document.querySelector("button");
 const dropdown = document.querySelectorAll(".dropdown select");
 
 // for (code in countryList) {
@@ -20,13 +20,34 @@ for (let select of dropdown) {
   }
   select.addEventListener("change", (event) => {
     updateFalg(event.target);
-  })
+  });
 }
 
 function updateFalg(element) {
-    let currencyCode = element.value;
-    let countryCode = countryList[currencyCode];
-    let newImgLink = `https://flagsapi.com/${countryCode}/flat/64.png`;
-    let img = element.parentElement.querySelector("img");
-    img.src = newImgLink;
+  let currencyCode = element.value;
+  let countryCode = countryList[currencyCode];
+  let newImgLink = `https://flagsapi.com/${countryCode}/flat/64.png`;
+  let img = element.parentElement.querySelector("img");
+  img.src = newImgLink;
 }
+
+btn.addEventListener("click", async (event) => {
+  event.preventDefault(); // prevent form submission/refresh
+  let amount = document.querySelector("#amount").value;
+  if (amount == "" || amount < 0) {
+    document.querySelector("#amount").value = 1;
+    amount = 1;
+  }
+  const fromCurrency = document.querySelector("#from").value.toLowerCase();
+  const toCurrency = document.querySelector("#to").value.toLowerCase();
+  console.log(fromCurrency, toCurrency);
+  let url = `${base_url}/${fromCurrency}.json`;
+  let response = await fetch(url);
+  let data = await response.json();
+  console.log(data);
+  let rate = data[fromCurrency][toCurrency]
+  console.log(rate)
+
+  const exchangeAmount = (amount*rate).toFixed(2);
+  console.log(exchangeAmount)
+});
