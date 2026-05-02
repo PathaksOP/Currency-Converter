@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currency Converter | Atharv Pathak</title>
+    <link rel="stylesheet" href="style.css">
     <!-- <link rel="icon" href="assets/favicon.png" type="image/x-icon"> -->
   </head>
   <body>
@@ -13,7 +14,7 @@
       <div class="container">
         <form>
           <div class="amount">
-            <label for="amount">Enter Amount</label>
+            <label id="label-amount" for="amount">Enter Amount</label>
             <input
               type="text"
               pattern="^\d+(\.\d+)?$"
@@ -25,7 +26,7 @@
 
           <div class="dropdown">
             <div class="from">
-                <label for="from">from</label>
+                <label id="label-from" for="from">From</label>
                 <img src="https://flagsapi.com/US/flat/64.png" alt="">
               <select id="from">
                 <option value="USD" selected>USD</option>
@@ -34,8 +35,9 @@
                 <option value="AED">AED</option>
               </select>
             </div>
+            <img src="assets/exchange.png" alt="exchange" class="exchange">
             <div class="to">
-                <label for="to">to</label>
+                <label id="label-to" for="to">To</label>
                 <img src="https://flagsapi.com/IN/flat/64.png" alt="">  
               <select id="to">
                 <option value="USD">USD</option>

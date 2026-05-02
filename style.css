@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffb30054;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+}
+
+header > div {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+form {
+  background: white;
+  padding: 20px;
+  max-height: 50vh;
+  border: 2px solid #333;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form select,
+button,
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+
+form input {
+  padding: 5px;
+  border: 2px solid lightgray;
+  font-size: 20px;
+}
+
+#label-amount {
+  font-size: 20px;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.exchange {
+  width: 50px;
+}
+
+.from,
+.to {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  align-self: flex-start;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.from img,
+.to img {
+  width: 60px;
+}
+
+select {
+  border: 2px solid lightgray !important;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+button {
+    padding: 10px;
+    border-radius: 7px;
+    border: 2px solid #333;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
