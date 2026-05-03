@@ -141,3 +141,24 @@ option {
   background-color: #333 !important;
   color: #fff;
 } */
+
+.result {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 10px;
+}
+
+.hidden {
+ visibility: hidden;
+}
+
+.exchange2 {
+ width: 25px;
+}

@@ -50,4 +50,9 @@ btn.addEventListener("click", async (event) => {
 
   const exchangeAmount = (amount*rate).toFixed(2);
   console.log(exchangeAmount)
+  document.querySelector(".r1").classList.remove("hidden");
+  document.querySelector(".r2").classList.remove("hidden");
+  document.querySelector(".exchange2").classList.remove("hidden");
+  document.querySelector(".r1").innerHTML = `${amount} ${fromCurrency.toUpperCase()}`;
+  document.querySelector(".r2").innerHTML = `${exchangeAmount} ${toCurrency.toUpperCase()}`;
 });
