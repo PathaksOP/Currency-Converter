@@ -42,7 +42,7 @@ main {
 form {
   background: white;
   padding: 20px;
-  max-height: 50vh;
+  /* max-height: 50vh; */
   border: 2px solid #333;
   border-radius: 10px;
   display: flex;

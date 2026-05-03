@@ -33,7 +33,10 @@ function updateFalg(element) {
 
 const updateExchangeRate = async () => {
   let amount = document.querySelector("#amount").value;
-  if (amount == "" || amount < 0) {
+  if (amount == "") {
+    document.querySelector("#amount").value = '';
+    amount = 1;
+  }else if (amount < 0) {
     document.querySelector("#amount").value = 1;
     amount = 1;
   }
@@ -60,6 +63,12 @@ btn.addEventListener("click", (event) => {
   updateExchangeRate();
 });
 
-window.addEventListener("load", () => {
+// window.addEventListener("load", () => {
+//   updateExchangeRate();
+// });
+
+
+document.querySelector("#amount").addEventListener("input", () => {
+  console.log("input event");
   updateExchangeRate();
 });
