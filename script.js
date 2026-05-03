@@ -31,8 +31,7 @@ function updateFalg(element) {
   img.src = newImgLink;
 }
 
-btn.addEventListener("click", async (event) => {
-  event.preventDefault(); // prevent form submission/refresh
+const updateExchangeRate = async () => {
   let amount = document.querySelector("#amount").value;
   if (amount == "" || amount < 0) {
     document.querySelector("#amount").value = 1;
@@ -45,14 +44,22 @@ btn.addEventListener("click", async (event) => {
   let response = await fetch(url);
   let data = await response.json();
   console.log(data);
-  let rate = data[fromCurrency][toCurrency]
-  console.log(rate)
+  let rate = data[fromCurrency][toCurrency];
+  console.log(rate);
 
-  const exchangeAmount = (amount*rate).toFixed(2);
-  console.log(exchangeAmount)
-  document.querySelector(".r1").classList.remove("hidden");
-  document.querySelector(".r2").classList.remove("hidden");
-  document.querySelector(".exchange2").classList.remove("hidden");
-  document.querySelector(".r1").innerHTML = `${amount} ${fromCurrency.toUpperCase()}`;
-  document.querySelector(".r2").innerHTML = `${exchangeAmount} ${toCurrency.toUpperCase()}`;
+  const exchangeAmount = (amount * rate).toFixed(2);
+  console.log(exchangeAmount);
+  document.querySelector(".r1").innerHTML =
+    `${amount} ${fromCurrency.toUpperCase()}`;
+  document.querySelector(".r2").innerHTML =
+    `${exchangeAmount} ${toCurrency.toUpperCase()}`;
+};
+
+btn.addEventListener("click", (event) => {
+  event.preventDefault(); // prevent form submission/refresh
+  updateExchangeRate();
+});
+
+window.addEventListener("load", () => {
+  updateExchangeRate();
 });
