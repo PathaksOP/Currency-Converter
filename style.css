@@ -6,7 +6,8 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffb30054;
+  /* background-color: #ffb30054; */
+  background: url(assets/bg.png);
 }
 
 header {
@@ -160,5 +161,27 @@ option {
 } */
 
 .exchange2 {
- width: 25px;
+  width: 25px;
+}
+
+.exchangerate {
+  width: 83%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  justify-items: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px;
+  border: 2px solid #686868;
+  color: #686868;
+  align-self: center;
+  border-radius: 15px;
+  gap: 5px;
+}
+.er1 {
+  justify-self: flex-end;
+}
+.er2 {
+  justify-self: flex-start;
 }

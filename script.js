@@ -34,9 +34,9 @@ function updateFalg(element) {
 const updateExchangeRate = async () => {
   let amount = document.querySelector("#amount").value;
   if (amount == "") {
-    document.querySelector("#amount").value = '';
+    document.querySelector("#amount").value = "";
     amount = 1;
-  }else if (amount < 0) {
+  } else if (amount < 0) {
     document.querySelector("#amount").value = 1;
     amount = 1;
   }
@@ -56,6 +56,8 @@ const updateExchangeRate = async () => {
     `${amount} ${fromCurrency.toUpperCase()}`;
   document.querySelector(".r2").innerHTML =
     `${exchangeAmount} ${toCurrency.toUpperCase()}`;
+  document.querySelector(".er1").innerHTML = `1 ${fromCurrency.toUpperCase()}`;
+  document.querySelector(".er2").innerHTML = `${rate.toFixed(2)} ${toCurrency.toUpperCase()}`;
 };
 
 // btn.addEventListener("click", (event) => {
@@ -67,20 +69,19 @@ window.addEventListener("load", () => {
   updateExchangeRate();
 });
 
-
 document.querySelector("#amount").addEventListener("input", () => {
   console.log("input event");
   updateExchangeRate();
 });
 
-document.querySelector('#from').addEventListener('change', () => {
-  console.log('change event');
+document.querySelector("#from").addEventListener("change", () => {
+  console.log("change event");
   updateExchangeRate();
-})
-document.querySelector('#to').addEventListener('change', () => {
-  console.log('change event');
+});
+document.querySelector("#to").addEventListener("change", () => {
+  console.log("change event");
   updateExchangeRate();
-})
+});
 
 document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault();
