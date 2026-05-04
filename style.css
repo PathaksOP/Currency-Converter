@@ -25,8 +25,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333333;
+  background: rgba(0, 0, 0, 0.3);
   color: #fff;
+  backdrop-filter: blur(6px);
 }
 
 header > div {
@@ -36,8 +37,14 @@ header > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 28px;
+  letter-spacing: 1px;
+  font-size: 36px;
   font-weight: 700;
+
+  background: linear-gradient(90deg, #4caf50, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 main {
@@ -127,15 +134,6 @@ label {
   width: 60px;
 }
 
-select {
-  border: 2px solid lightgray !important;
-  border-radius: 5px;
-  font-size: 17px;
-  /* appearance: none; */
-  background-color: #f0f0f0;
-  cursor: pointer;
-}
-
 button {
   padding: 10px;
   border-radius: 7px;
@@ -143,6 +141,16 @@ button {
   background-color: #333;
   color: #fff;
   font-weight: bold;
+  cursor: pointer;
+}
+
+select {
+  /* appearance: base-select; */
+  border: 2px solid lightgray !important;
+  border-radius: 5px;
+  font-size: 17px;
+  /* appearance: none; */
+  background-color: #f0f0f0;
   cursor: pointer;
 }
 
