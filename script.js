@@ -1,5 +1,5 @@
 const base_url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies`;
-const btn = document.querySelector("button");
+// const btn = document.querySelector("button");
 const dropdown = document.querySelectorAll(".dropdown select");
 
 // for (code in countryList) {
@@ -58,17 +58,31 @@ const updateExchangeRate = async () => {
     `${exchangeAmount} ${toCurrency.toUpperCase()}`;
 };
 
-btn.addEventListener("click", (event) => {
-  event.preventDefault(); // prevent form submission/refresh
-  updateExchangeRate();
-});
-
-// window.addEventListener("load", () => {
+// btn.addEventListener("click", (event) => {
+//   event.preventDefault(); // prevent form submission/refresh
 //   updateExchangeRate();
 // });
+
+window.addEventListener("load", () => {
+  updateExchangeRate();
+});
 
 
 document.querySelector("#amount").addEventListener("input", () => {
   console.log("input event");
+  updateExchangeRate();
+});
+
+document.querySelector('#from').addEventListener('change', () => {
+  console.log('change event');
+  updateExchangeRate();
+})
+document.querySelector('#to').addEventListener('change', () => {
+  console.log('change event');
+  updateExchangeRate();
+})
+
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
   updateExchangeRate();
 });
