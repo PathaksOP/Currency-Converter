@@ -58,6 +58,11 @@ const updateExchangeRate = async () => {
     `${exchangeAmount} ${toCurrency.toUpperCase()}`;
   document.querySelector(".er1").innerHTML = `1 ${fromCurrency.toUpperCase()}`;
   document.querySelector(".er2").innerHTML = `${rate.toFixed(2)} ${toCurrency.toUpperCase()}`;
+
+  // document.querySelector(".result").classList.add("resAnimation");
+  // setTimeout(() => {
+  //   document.querySelector(".result").classList.remove("resAnimation");
+  // }, 500);
 };
 
 // btn.addEventListener("click", (event) => {
