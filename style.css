@@ -146,14 +146,14 @@ button {
 
 select {
   /* appearance: base-select; */
-  border: 2px solid lightgray !important;
+  /* border: 2px solid lightgray !important; */
   border-radius: 5px;
   font-size: 17px;
   /* appearance: none; */
-  background-color: #f0f0f0;
+  background: #ffffff38;
+  backdrop-filter: blur(0px);
   cursor: pointer;
 }
-
 select::-webkit-scrollbar {
   /* display: none;  */
   width: 10px;
