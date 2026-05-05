@@ -1,6 +1,6 @@
-<img width="1254" height="1254" alt="image" src="https://github.com/user-attachments/assets/677216f2-ce67-40cb-9728-4ec469993f78" /># Currency-Converter
-
+# Currency-Converter
 <b>A Currency Converter!</b>
+<hr>
 <!--
 [LINK](https://pathaksop.github.io/Currency-Converter/)-->
 ## Preview
