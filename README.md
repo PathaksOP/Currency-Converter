@@ -1,8 +1,10 @@
 # Currency-Converter
 <b>A Currency Converter!</b>
 <hr>
-<!--
-[LINK](https://pathaksop.github.io/Currency-Converter/)-->
+
+## Live Demo
+**https://pathaksop.github.io/Currency-Converter/**
+<hr>
 
 ## Preview
 <img width="1908" height="972" alt="image" src="https://github.com/user-attachments/assets/3c742622-2b32-44a1-9bd9-4470207213fa" />
@@ -24,21 +26,41 @@ A Currency Converter with almost ALL currencies and very COOL UI
 <hr>
 
 ## Features
+* Real-time currency conversion
+* Instant conversion on input
+* 150+ currencies supported
 * Cinematic background
 * Glass effect on main content
 * Blur effects all over
 * Hover effects on Swap, result, etc
 * Animations on multiple elements
 * Flags for each country
+* Flags are auto-updated
 * Input validation
 * Division for Exchange Rate
 * Swappable from and to Currencies
+* Responsive UI
 <hr>
 
-## APIs used
+## How does it work?
+* It fetches the real-time exchange rate whenever the user inputs, changes currency, or swaps currencies
+* Calculates the converted currency based on the current exchange rate
+* Updates the flag whenever currency is changed or swapped
+<hr>
+
+## Tech Stack
+
+- HTML
+- CSS
+- JavaScript
+- Exchange-API (fawazahmed0)
+- FlagsAPI
+<hr>
+
+## Credits
 * [FlagsAPI](https://flagsapi.com/)
   To display the flags of Countries
 * [Exchange-API](https://github.com/fawazahmed0/exchange-api) by [fawazahmed0](https://github.com/fawazahmed0)
-  To get exchange rate for each currency
-
+  To get the exchange rate for each currency
+<hr>
 
