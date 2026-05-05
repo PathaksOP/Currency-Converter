@@ -19,11 +19,11 @@ for (let select of dropdown) {
     }
   }
   select.addEventListener("change", (event) => {
-    updateFalg(event.target);
+    updateFlag(event.target);
   });
 }
 
-function updateFalg(element) {
+function updateFlag(element) {
   let currencyCode = element.value;
   let countryCode = countryList[currencyCode];
   let newImgLink = `https://flagsapi.com/${countryCode}/flat/64.png`;
@@ -92,3 +92,12 @@ document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault();
   updateExchangeRate();
 });
+
+document.querySelector(".exchange").addEventListener("click", () => {
+  let prevfrom = document.querySelector("#from").value;
+  document.querySelector("#from").value = document.querySelector("#to").value;
+  document.querySelector("#to").value = prevfrom;
+  updateFlag(document.querySelector("#from"));
+  updateFlag(document.querySelector("#to"));
+  updateExchangeRate();
+})
