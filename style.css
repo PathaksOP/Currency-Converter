@@ -260,7 +260,7 @@ label {
 } */
 
 footer {
-  color: white;
+  color: rgba(255, 255, 255, 0.658);
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -280,7 +280,7 @@ footer {
   text-align: right;
 }
 a {
-  color: #009dff;
+  color: #009dffcf;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
