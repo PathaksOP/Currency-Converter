@@ -3,6 +3,7 @@
 <hr>
 <!--
 [LINK](https://pathaksop.github.io/Currency-Converter/)-->
+
 ## Preview
 <img width="1908" height="972" alt="image" src="https://github.com/user-attachments/assets/3c742622-2b32-44a1-9bd9-4470207213fa" />
 <hr>
